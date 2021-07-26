@@ -8,10 +8,12 @@ def startBrowser():
         path = "D:\\pythonpr\\pythonProject1\\chromedriver"
         driver = Chrome(executable_path=path)
     elif ((ConfigReader.readConfigData('Details', 'Browser')) == 'firefox'):
-        path = "D:\\pythonpr\\pythonProject1\\geckodriver"
+        # path = "D:\\pythonpr\\pythonProject1\\geckodriver"
+        path = "./Driver/geckodriver.exe"
         driver = Firefox(executable_path=path)
     else:
-        path = "D:\\pythonpr\\pythonProject1\\chromedriver"
+        # path = "D:\\pythonpr\\pythonProject1\\chromedriver"
+        path = "./Driver/chromedriver.exe"
         driver = Chrome(executable_path=path)
 
     driver.get(ConfigReader.readConfigData('Details', 'Application_URL'))
